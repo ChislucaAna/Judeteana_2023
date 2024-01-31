@@ -1,0 +1,11 @@
+C:\Users\anach\OneDrive\Desktop\JocEducativ\JocEducativ\bin\Debug\JocEducativ.exe.config
+C:\Users\anach\OneDrive\Desktop\JocEducativ\JocEducativ\bin\Debug\JocEducativ.exe
+C:\Users\anach\OneDrive\Desktop\JocEducativ\JocEducativ\bin\Debug\JocEducativ.pdb
+C:\Users\anach\OneDrive\Desktop\JocEducativ\JocEducativ\obj\Debug\JocEducativ.csproj.AssemblyReference.cache
+C:\Users\anach\OneDrive\Desktop\JocEducativ\JocEducativ\obj\Debug\JocEducativ.Properties.Resources.resources
+C:\Users\anach\OneDrive\Desktop\JocEducativ\JocEducativ\obj\Debug\JocEducativ.csproj.GenerateResource.cache
+C:\Users\anach\OneDrive\Desktop\JocEducativ\JocEducativ\obj\Debug\JocEducativ.csproj.CoreCompileInputs.cache
+C:\Users\anach\OneDrive\Desktop\JocEducativ\JocEducativ\obj\Debug\JocEducativ.exe
+C:\Users\anach\OneDrive\Desktop\JocEducativ\JocEducativ\obj\Debug\JocEducativ.pdb
+C:\Users\anach\OneDrive\Desktop\JocEducativ\JocEducativ\bin\Debug\JocEducativ.mdf
+C:\Users\anach\OneDrive\Desktop\JocEducativ\JocEducativ\bin\Debug\JocEducativ_log.ldf
