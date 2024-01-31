@@ -25,7 +25,52 @@ namespace JocEducativ
         SqlDataReader r;
         StreamReader reader;
         string line;
-        private void Form1_Load(object sender, EventArgs e)
+        string email, parola;
+        int ok = 0;
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+            email = textBox1.Text;
+        }
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+            parola = textBox2.Text;
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                con.Close();
+                con.Open();
+                cmd = new SqlCommand(String.Format("SELECT * FROM Utilizatori WHERE EmailUtilizator='{0}' AND Parola='{1}';",email,parola),con);
+                r = cmd.ExecuteReader();
+                while(r.Read())
+                {
+                    ok = 1;
+                }
+                con.Close();
+                r.Close();
+                if (ok == 1)
+                {
+                    AlegeJoc callable = new AlegeJoc(email);
+                    callable.ShowDialog();
+                    this.Hide();
+                }
+                else
+                {
+                    MessageBox.Show("Date de autentificare invalide!");
+                    textBox1.Text = null;
+                    textBox2.Text = null;
+                }
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+        private void Autentificare_Load(object sender, EventArgs e)
         {
             try
             {

@@ -61,14 +61,31 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AlegeJoc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AlegeJoc.Designer.cs">
+      <DependentUpon>AlegeJoc.cs</DependentUpon>
+    </Compile>
     <Compile Include="Autentificare.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Autentificare.Designer.cs">
       <DependentUpon>Autentificare.cs</DependentUpon>
     </Compile>
+    <Compile Include="JocEducativDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>JocEducativDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="AlegeJoc.resx">
+      <DependentUpon>AlegeJoc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Autentificare.resx">
+      <DependentUpon>Autentificare.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -78,6 +95,17 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <None Include="JocEducativDataSet.xsc">
+      <DependentUpon>JocEducativDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="JocEducativDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>JocEducativDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="JocEducativDataSet.xss">
+      <DependentUpon>JocEducativDataSet.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

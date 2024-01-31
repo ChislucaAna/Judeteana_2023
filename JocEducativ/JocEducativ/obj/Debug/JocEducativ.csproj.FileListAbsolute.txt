@@ -9,3 +9,5 @@ C:\Users\anach\OneDrive\Desktop\JocEducativ\JocEducativ\obj\Debug\JocEducativ.ex
 C:\Users\anach\OneDrive\Desktop\JocEducativ\JocEducativ\obj\Debug\JocEducativ.pdb
 C:\Users\anach\OneDrive\Desktop\JocEducativ\JocEducativ\bin\Debug\JocEducativ.mdf
 C:\Users\anach\OneDrive\Desktop\JocEducativ\JocEducativ\bin\Debug\JocEducativ_log.ldf
+C:\Users\anach\OneDrive\Desktop\JocEducativ\JocEducativ\obj\Debug\JocEducativ.AlegeJoc.resources
+C:\Users\anach\OneDrive\Desktop\JocEducativ\JocEducativ\obj\Debug\JocEducativ.Autentificare.resources
