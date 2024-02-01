@@ -73,6 +73,12 @@
     <Compile Include="Autentificare.Designer.cs">
       <DependentUpon>Autentificare.cs</DependentUpon>
     </Compile>
+    <Compile Include="Ghiceste.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ghiceste.Designer.cs">
+      <DependentUpon>Ghiceste.cs</DependentUpon>
+    </Compile>
     <Compile Include="JocEducativDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -80,6 +86,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Sarpe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sarpe.Designer.cs">
+      <DependentUpon>Sarpe.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="AlegeJoc.resx">
       <DependentUpon>AlegeJoc.cs</DependentUpon>
     </EmbeddedResource>
@@ -94,7 +106,11 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Sarpe.resx">
+      <DependentUpon>Sarpe.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="JocEducativDataSet.xsc">
       <DependentUpon>JocEducativDataSet.xsd</DependentUpon>
     </None>
@@ -120,6 +136,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="bin\Debug\6.png" />
     <Content Include="JocEducativ.mdf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
