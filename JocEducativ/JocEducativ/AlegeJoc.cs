@@ -14,133 +14,95 @@ namespace JocEducativ
 {
     public partial class AlegeJoc : Form
     {
-        public AlegeJoc(string email)
+        public AlegeJoc(string email,string nume)
         {
             InitializeComponent();
-            label1.Text += ":";
-            label1.Text += email;
-            label1.Text += "!";
             con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\JocEducativ.mdf;Integrated Security=True");
+            label1.Text += "Bine ai venit,";
+            label1.Text += nume;
+            label1.Text += "!(";
+            label1.Text += email;
+            label1.Text += ")";
         }
 
         SqlConnection con;
         SqlCommand cmd;
         SqlDataReader r;
         StreamReader reader;
-        int mx1 = 0; int mx2 = 0; int mx3 = 0;
-        string email1, email2, email3;
+        int mxprecedent = 1999999;
+        string nume;
+        string email;
+        string punctaj;
 
-        public void findmax(int tipjoc)
+        private void findmax(int tipjoc)
         {
-
-        }
-
-        public void find_name_by_email(string email)
-        {
-
-        }
-
-        private void AlegeJoc_Load(object sender, EventArgs e)
-        {
-            //cele mai mari 3 rezultate din Ghiceste
+            int mx = 0;
+            cmd = new SqlCommand(String.Format("SELECT * FROM Rezultate WHERE TipJoc={0};", tipjoc.ToString()), con);
             con.Open();
-            cmd = new SqlCommand("SELECT * FROM Rezultate WHERE TipJoc=0;",con);
-            r = cmd.ExecuteReader();
-           while(r.Read())
-           {
-                if(Convert.ToInt32(r[3])> mx1)
-                {
-                    mx3 = mx2;
-                    email3 = email2;
-
-                    mx2 = mx1;
-                    email2 = email1;
-
-                    mx1 = Convert.ToInt32(r[3]);
-                    email1 = r[2].ToString();
-
-                }
-                else
-                {
-                    if(Convert.ToInt32(r[3])>mx2)
-                    {
-                        mx3 = mx2;
-                        email3 = email2;
-
-                        mx2 = Convert.ToInt32(r[3]);
-                        email2 = r[2].ToString();
-                    }
-                    else
-                    {
-                        if(Convert.ToInt32(r[3])>mx3)
-                        {
-                            mx3 = Convert.ToInt32(r[3]);
-                            email3 = r[2].ToString();
-                        }
-                    }
-                }
-           }
-            r.Close();
-            con.Close();
-            //adauga rezultatele despre jocul Ghiceste
-            //cauta in baza de date nuumele utilizatorului cu emailurile alea
-            cmd = new SqlCommand(String.Format("SELECT FROM Utilizatori WHERE NumeUtilizator='{0}';", email1), con);
-
-            //reseteaza variabilele
-            mx1 = 0;
-            mx2 = 0;
-            mx3 = 0;
-            //Sarpe
-            con.Open();
-            cmd = new SqlCommand("SELECT * FROM Rezultate WHERE TipJoc=1;",con);
             r = cmd.ExecuteReader();
             while (r.Read())
             {
-                if (Convert.ToInt32(r[3]) > mx1)
+                punctaj = r[3].ToString();
+                if (Convert.ToInt32(punctaj) >mx && Convert.ToInt32(punctaj)<mxprecedent)
                 {
-                    mx3 = mx2;
-                    email3 = email2;
-
-                    mx2 = mx1;
-                    email2 = email1;
-
-                    mx1 = Convert.ToInt32(r[3]);
-                    email1 = r[2].ToString();
-
-                }
-                else
-                {
-                    if (Convert.ToInt32(r[3]) > mx2)
-                    {
-                        mx3 = mx2;
-                        email3 = email2;
-
-                        mx2 = Convert.ToInt32(r[3]);
-                        email2 = r[2].ToString();
-                    }
-                    else
-                    {
-                        if (Convert.ToInt32(r[3]) > mx3)
-                        {
-                            mx3 = Convert.ToInt32(r[3]);
-                            email3 = r[2].ToString();
-                        }
-                    }
+                    mx = Convert.ToInt32(punctaj);
+                    email = r[2].ToString();
                 }
             }
             con.Close();
             r.Close();
-            
+            find_name(email);
+            mxprecedent = mx;
+            if (tipjoc == 0)
+                addtodatagrid1(email, nume, mx);
+            else
+                addtodatagrid2(email, nume, mx);
+        }
+
+        private void find_name(string email)
+        {
+            con.Open();
+            cmd = new SqlCommand(String.Format("SELECT * FROM Utilizatori WHERE EmailUtilizator='{0}';", email), con);
+            r = cmd.ExecuteReader();
+            while (r.Read())
+            {
+                nume = r[1].ToString();
+            }
+            con.Close();
+            r.Close();
+        }
+
+        private void addtodatagrid1(string email,string nume,int mx)
+        {
+            dataGridView1.Rows.Add(email, nume, mx.ToString());
+        }
+
+        private void addtodatagrid2(string email, string nume, int mx)
+        {
+            dataGridView2.Rows.Add(email, nume, mx.ToString());
+        }
+
+        private void AlegeJoc_Load(object sender, EventArgs e)
+        {
+            int i; //tipjoc
+            for (i = 0; i <= 1; i++)
+            {
+                mxprecedent = 1999999;
+                for (int cnt = 1; cnt <= 3; cnt++)
+                {
+                    findmax(i);
+                }
+            }
+            Ghiceste callable = new Ghiceste(email);
+            callable.ShowDialog();
+            this.Hide();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-
+            Ghiceste callable = new Ghiceste(email);
+            callable.ShowDialog();
+            this.Hide();
         }
     }
 }

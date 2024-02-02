@@ -26,6 +26,7 @@ namespace JocEducativ
         StreamReader reader;
         string line;
         string email, parola;
+        string nume;
         int ok = 0;
 
         private void textBox1_TextChanged(object sender, EventArgs e)
@@ -49,12 +50,13 @@ namespace JocEducativ
                 while(r.Read())
                 {
                     ok = 1;
+                    nume = r[1].ToString();
                 }
                 con.Close();
                 r.Close();
                 if (ok == 1)
                 {
-                    AlegeJoc callable = new AlegeJoc(email);
+                    AlegeJoc callable = new AlegeJoc(email,nume);
                     callable.ShowDialog();
                     this.Hide();
                 }
@@ -105,6 +107,9 @@ namespace JocEducativ
             {
                 MessageBox.Show(ex.Message);
             }
+
+            AlegeJoc callable = new AlegeJoc("ana", "ana");
+            callable.ShowDialog();
         }
     }
 }

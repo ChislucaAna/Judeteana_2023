@@ -86,17 +86,14 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Sarpe.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Sarpe.Designer.cs">
-      <DependentUpon>Sarpe.cs</DependentUpon>
-    </Compile>
     <EmbeddedResource Include="AlegeJoc.resx">
       <DependentUpon>AlegeJoc.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Autentificare.resx">
       <DependentUpon>Autentificare.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ghiceste.resx">
+      <DependentUpon>Ghiceste.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -108,9 +105,6 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="Sarpe.resx">
-      <DependentUpon>Sarpe.cs</DependentUpon>
-    </EmbeddedResource>
     <None Include="JocEducativDataSet.xsc">
       <DependentUpon>JocEducativDataSet.xsd</DependentUpon>
     </None>
