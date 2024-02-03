@@ -31,15 +31,15 @@ namespace JocEducativ
         {
             this.label1 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
             this.NumeUtilizator = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.EmailUtilizator = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PunctajJoc = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.SuspendLayout();
@@ -65,6 +65,21 @@ namespace JocEducativ
             this.dataGridView1.Size = new System.Drawing.Size(346, 181);
             this.dataGridView1.TabIndex = 1;
             // 
+            // NumeUtilizator
+            // 
+            this.NumeUtilizator.HeaderText = "NumeUtilizator";
+            this.NumeUtilizator.Name = "NumeUtilizator";
+            // 
+            // EmailUtilizator
+            // 
+            this.EmailUtilizator.HeaderText = "EmailUtilizator";
+            this.EmailUtilizator.Name = "EmailUtilizator";
+            // 
+            // PunctajJoc
+            // 
+            this.PunctajJoc.HeaderText = "PunctajJoc";
+            this.PunctajJoc.Name = "PunctajJoc";
+            // 
             // dataGridView2
             // 
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -76,6 +91,21 @@ namespace JocEducativ
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.Size = new System.Drawing.Size(339, 181);
             this.dataGridView2.TabIndex = 2;
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.HeaderText = "NumeUtilizator";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.HeaderText = "EmailUtilizator";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.HeaderText = "PunctajJoc";
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
             // 
             // button1
             // 
@@ -97,36 +127,7 @@ namespace JocEducativ
             this.button2.TabIndex = 4;
             this.button2.Text = "Snake";
             this.button2.UseVisualStyleBackColor = false;
-            // 
-            // NumeUtilizator
-            // 
-            this.NumeUtilizator.HeaderText = "NumeUtilizator";
-            this.NumeUtilizator.Name = "NumeUtilizator";
-            // 
-            // EmailUtilizator
-            // 
-            this.EmailUtilizator.HeaderText = "EmailUtilizator";
-            this.EmailUtilizator.Name = "EmailUtilizator";
-            // 
-            // PunctajJoc
-            // 
-            this.PunctajJoc.HeaderText = "PunctajJoc";
-            this.PunctajJoc.Name = "PunctajJoc";
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.HeaderText = "NumeUtilizator";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.HeaderText = "EmailUtilizator";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            // 
-            // dataGridViewTextBoxColumn3
-            // 
-            this.dataGridViewTextBoxColumn3.HeaderText = "PunctajJoc";
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // AlegeJoc
             // 

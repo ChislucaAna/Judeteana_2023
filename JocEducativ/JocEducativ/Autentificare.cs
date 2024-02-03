@@ -107,9 +107,6 @@ namespace JocEducativ
             {
                 MessageBox.Show(ex.Message);
             }
-
-            AlegeJoc callable = new AlegeJoc("ana", "ana");
-            callable.ShowDialog();
         }
     }
 }

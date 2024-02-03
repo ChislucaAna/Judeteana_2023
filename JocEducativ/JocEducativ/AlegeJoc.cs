@@ -93,14 +93,18 @@ namespace JocEducativ
                     findmax(i);
                 }
             }
-            Ghiceste callable = new Ghiceste(email);
-            callable.ShowDialog();
-            this.Hide();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
             Ghiceste callable = new Ghiceste(email);
+            callable.ShowDialog();
+            this.Hide();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Sarpe callable = new Sarpe(email);
             callable.ShowDialog();
             this.Hide();
         }

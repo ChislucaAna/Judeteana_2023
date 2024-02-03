@@ -12,3 +12,5 @@ C:\Users\anach\OneDrive\Desktop\JocEducativ\JocEducativ\bin\Debug\JocEducativ_lo
 C:\Users\anach\OneDrive\Desktop\JocEducativ\JocEducativ\obj\Debug\JocEducativ.AlegeJoc.resources
 C:\Users\anach\OneDrive\Desktop\JocEducativ\JocEducativ\obj\Debug\JocEducativ.Autentificare.resources
 C:\Users\anach\OneDrive\Desktop\JocEducativ\JocEducativ\obj\Debug\JocEducativ.Ghiceste.resources
+C:\Users\anach\OneDrive\Desktop\JocEducativ\JocEducativ\obj\Debug\JocEducativ.Sarpe.resources
+C:\Users\anach\OneDrive\Desktop\JocEducativ\JocEducativ\obj\Debug\JocEducativ.Intrebare.resources
